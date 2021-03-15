@@ -57,4 +57,4 @@ $ yarn test:cov
 
 `endpoint: /meter-value?meter=200`
 
-UI Swagger no Heroku: [Acessar](https://ingaia-challenge-api.herokuapp.com/?)
+UI Swagger no Heroku: [Acessar](https://ingaia-challenge-api.herokuapp.com/api)
