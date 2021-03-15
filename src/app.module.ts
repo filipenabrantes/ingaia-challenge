@@ -1,12 +1,17 @@
 import { SquareMeterModule } from './square-meter/square-meter.module';
 import { SquareMeterController } from './square-meter/square-meter.controller';
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [SquareMeterModule],
-  controllers: [SquareMeterController, AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: ['.env'],
+    }),
+    SquareMeterModule,
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
