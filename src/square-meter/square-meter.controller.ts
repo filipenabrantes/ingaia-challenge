@@ -5,7 +5,7 @@ import { SquareMeterService } from './square-meter.service';
 export class SquareMeterController {
   constructor(private readonly squareMeterService: SquareMeterService) {}
 
-  @Get()
+  @Get('meter-value')
   getMeterValue(): string {
     return this.squareMeterService.getSquareMeterValue();
   }
