@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
+const FAKE_VALUE = '2000';
 @Injectable()
 export class SquareMeterService {
   constructor(private readonly configService: ConfigService) {}
@@ -10,6 +11,7 @@ export class SquareMeterService {
   }
 
   private fakeDatabase(): string {
-    return this.configService.get('METER_VALUE');
+    return FAKE_VALUE;
+    return this.configService.get('METER_VALUE') || FAKE_VALUE;
   }
 }
