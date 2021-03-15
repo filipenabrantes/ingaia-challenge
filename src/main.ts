@@ -26,7 +26,7 @@ async function bootstrap() {
   };
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document, customOptions);
-  await app.listen(process.env.PORT || 3000);
-  Logger.log(`🚀 Running on ${process.env.PORT || 3000} port.`);
+  await app.listen(process.env.PORT || 3001);
+  Logger.log(`🚀 Running on ${process.env.PORT || 3001} port.`);
 }
 bootstrap();
